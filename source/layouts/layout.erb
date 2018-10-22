@@ -8,10 +8,16 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %></title>
     <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "partials/navbar" %>
+    <%= stylesheet_link_tag "partials/footer" %>
     <%= javascript_include_tag "application" %>
     <%= favicon_tag 'images/favicon.png' %>
+
+
   </head>
   <body>
+    <%= partial "layouts/partials/navbar" %>
     <%= yield %>
+    <%= partial "layouts/partials/footer" %>
   </body>
 </html>
